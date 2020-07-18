@@ -1,11 +1,13 @@
 #include <stdio.h>
+#include <cs50.h>
 #include <string.h>
 #include <ctype.h>
 #include <math.h>
 
 int main(void)
 {
-    // string s = get_string("Text: ");
+    //change to string//
+    char s = get_string("Text: ");
 
     //Letter Count//
 
