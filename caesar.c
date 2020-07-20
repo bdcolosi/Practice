@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+
 int main(int argc, string argv[])
 {
     if (argc == 2)
@@ -18,8 +19,15 @@ int main(int argc, string argv[])
 
                 for (int y = 0; y < strlen(user_input); y++)
                 {
-                    char p = user_input[y];
-                    printf("%c", p + k);
+                    if (isspace(user_input[y]) || ispunct(user_input[y]))
+                    {
+                        printf("%c", user_input[y]);
+                    }
+                    else
+                    {
+                        char p = user_input[y];
+                        printf("%c", p + k);
+                    }
                 }
                 printf("\n");
                 return 1;
@@ -36,3 +44,6 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
     }
 }
+
+
+
